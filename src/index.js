@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import "./index.css";
 
 const pizzaData = [
   {
@@ -48,7 +49,7 @@ const pizzaData = [
 
 function App() {
   return (
-    <div>
+    <div className="container">
       <Header />
       <Menu />
       <Footer />
@@ -57,15 +58,19 @@ function App() {
 }
 
 function Header() {
-  return <h1>Fast React Pizza Co.</h1>;
+  return (
+    <header className="header">
+      <h1>Fast React Pizza Co.</h1>
+    </header>
+  );
 }
 
 function Menu() {
   return (
-    <div>
+    <main className="menu">
       <h2>Our Menu</h2>
       <Pizza />
-    </div>
+    </main>
   );
 }
 
@@ -76,7 +81,7 @@ function Footer() {
   const isOpen = hour >= openHour && hour <= closeHour;
 
   return (
-    <footer>
+    <footer className="footer">
       {new Date().toLocaleTimeString("en-US")} We're currently open
     </footer>
   );
@@ -85,8 +90,8 @@ function Footer() {
 function Pizza() {
   return (
     <div>
-      <h2>Pizza Pinaci</h2>
       <img src="pizzas/spinaci.jpg" alt="Pizza spinaci" />
+      <h3>Pizza Pinaci</h3>
       <p>Tomato, mozarella, spinach, and ricotta cheese.</p>
     </div>
   );
