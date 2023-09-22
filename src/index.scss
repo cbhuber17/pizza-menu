@@ -59,15 +59,17 @@ body {
     }
   }
 
-  &::before,
-  &::after {
-    display: block;
-    content: "";
-    height: 3px;
-    width: 4rem;
-    background-color: #edc84b;
-    position: absolute;
-    top: calc(50% - 1px);
+  @media (min-width: 800px) {
+    &::before,
+    &::after {
+      display: block;
+      content: "";
+      height: 3px;
+      width: 4rem;
+      background-color: #edc84b;
+      position: absolute;
+      top: calc(50% - 1px);
+    }
   }
 }
 
